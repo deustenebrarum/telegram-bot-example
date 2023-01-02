@@ -21,7 +21,8 @@ async def start_bot_handler(message: types.Message): # делаем асинхр
   await message.reply(f"Привет, {name}")
 
 
-@dispatcher.message_handler(regexp="(?i)^время", commands=['time']) 
+@dispatcher.message_handler(regexp="(?i)^/?время") # тут пишем regexp, который будет подходить всем сообщениям, начинающимся со слова время
+                                                   # или /время
 async def get_time_handler(message: types.Message): # делаем функцию с ответом для 
 # любых сообщений начинающихся с время, можешь кратко объяснить regexp
   await message.reply(f"Сейчас {datetime.now().strftime('%H:%M:%S')} " # вставляем в строку нынешнюю дату на нашем компьютере и форматируем
