@@ -1,0 +1,5 @@
+pip install -r requirements.txt
+
+get bot token from Telegram Bot Father
+
+create .env file like .env.example and set BOT_TOKEN variable
